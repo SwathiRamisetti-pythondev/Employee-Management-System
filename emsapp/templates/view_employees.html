@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Data</title>
+</head>
+<body>
+    <h1>Employee List</h1>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Emp ID</th>
+            <th>Designation</th>
+            <th>Date of Joining</th>
+            <th>Department</th>
+            <th>Salary</th>
+            <th>Experience</th>
+        </tr>
+        {% for emp in employees %}
+        <tr>
+            <td>{{ emp.emp_name }}</td>
+            <td>{{ emp.emp_id }}</td>
+            <td>{{ emp.designation }}</td>
+            <td>{{ emp.date_of_joining }}</td>
+            <td>{{ emp.department }}</td>
+            <td>{{ emp.salary_package }}</td>
+            <td>{{ emp.experience }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/add_employee/">Add Employee</a>
+</body>
+</html>

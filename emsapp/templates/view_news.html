@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latest News</title>
+</head>
+<body>
+    <h1>Latest News</h1>
+    <ul>
+        {% for news in news_list %}
+        <li>{{ news.date_posted }} - {{ news.occasion }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/add_news/">Add News</a>
+</body>
+</html>

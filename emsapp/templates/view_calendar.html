@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holidays Calendar</title>
+</head>
+<body>
+    <h1>Holidays Calendar</h1>
+    <table border="1">
+        <tr>
+            <th>Date</th>
+            <th>Occasion</th>
+        </tr>
+        {% for holiday in calendar_list %}
+        <tr>
+            <td>{{ holiday.date }}</td>
+            <td>{{ holiday.occasion }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/add_calendar/">Add Holiday</a>
+</body>
+</html>
