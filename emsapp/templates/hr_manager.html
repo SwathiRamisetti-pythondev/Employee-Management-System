@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="text-center">HR Manager Portal</h1>
+    <div class="d-flex justify-content-center gap-3 mt-4">
+        <a href="{% url 'home' %}" class="btn btn-warning">Home</a>
+        <a href="{% url 'add_employee' %}" class="btn btn-primary">Add Employee</a>
+        <a href="{% url 'view_employees' %}" class="btn btn-secondary">View Employee Data</a>
+        <a href="{% url 'add_news' %}" class="btn btn-info">Add Latest News</a>
+        <a href="{% url 'add_calendar' %}" class="btn btn-success">Add Calendar</a>
+    </div>
+</div>
+{% endblock %}

@@ -17,14 +17,18 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from emsapp import views
+from emsapp.views import no_access
+
 urlpatterns = [
-    path('admin/', admin.site.urls),  # Default Django admin panel
-    path('home/', views.homeview),  # Calls the homeview function when "/home/" is visited
-    path('hr/', views.hrview),  # Calls the hrview function when "/hr/" is visited
-    path('add_employee/', views.add_employee),
-    path('view_employees/', views.view_employees),
-    path('add_news/', views.add_news),
-    path('view_news/', views.view_news),
-    path('add_calendar/', views.add_calendar),
-    path('view_calendar/', views.view_calendar),
+    path('admin/', admin.site.urls),  # Django admin panel
+    path('', views.homeview, name='home'),  # Ensure home is accessible at '/'
+    path('hr/', views.hrview, name='hr_manager'),
+    path('add_employee/', views.add_employee, name='add_employee'),
+    path('view_employees/', views.view_employees, name='view_employees'),
+    path('add_news/', views.add_news, name='add_news'),
+    path('view_news/', views.view_news, name='view_news'),
+    path('add_calendar/', views.add_calendar, name='add_calendar'),
+    path('view_calendar/', views.view_calendar, name='view_calendar'),
+    path('no-access/', views.no_access, name='no_access'),
+    path('technical_issues/', views.technical_issues, name='technical_issues'),
 ]
