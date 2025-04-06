@@ -21,7 +21,7 @@ from emsapp.views import no_access
 
 urlpatterns = [
     path('admin/', admin.site.urls),  # Django admin panel
-    path('', views.homeview, name='home'),  # Ensure home is accessible at '/'
+    path('home/', views.homeview, name='home'),  # Ensure home is accessible at '/'
     path('hr/', views.hrview, name='hr_manager'),
     path('add_employee/', views.add_employee, name='add_employee'),
     path('view_employees/', views.view_employees, name='view_employees'),
